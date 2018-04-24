@@ -1,0 +1,184 @@
+/*---------------------------------------------
+	Projekt Internettechnologie Technikerschule
+	CSS Stylesheet
+---------------------------------------------*/
+
+
+/*-------------
+ 	General Settings
+-------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font: normal 16px sans-serif;
+	color: #555;
+}
+
+header {
+	padding: 20px 100px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	z-index: 1;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 125px 100px;
+}
+
+a:hover{
+	opacity: 1;
+}
+
+h1 {
+	font: bold 40px sans-serif;
+	margin-bottom: 50px;
+}
+
+h2 {
+	margin-bottom: 30px;
+	font: normal 28px sans-serif;
+}
+
+h4 {
+	font: bold 16px sans-serif;
+	margin-bottom: 10px;
+}
+
+
+/*-------------
+ 	classes
+-------------*/
+.grid h4 {
+	font: normal 20px sans-serif;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+nav li, .grid-item {
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+
+	opacity: 0.9;
+}
+
+header .logo {
+	height: 80px;
+}
+
+header nav {
+	display: flex;
+}
+
+header nav li {
+	margin: 0 20px;
+}
+
+.modelsum {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 0 80px;
+}
+
+.modeldescr li {
+	list-style: inside;
+}
+
+.modelpic {
+	padding-right: 70px;
+}
+
+.modeldescr p {
+	margin-bottom: 5px;
+}
+
+hr {
+	opacity: 0.6;
+}
+
+.grid {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	
+}
+
+.grid-item {
+	width: 250px;
+	height: 250px;
+	background-color: rgba(33,150,243,0.8);
+	margin: 10px;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.grid-item li {
+	list-style: disc;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 1000px){
+	.grid {
+		justify-content: space-around;
+	}
+}
+
+@media (max-width: 700px) {
+	header {
+		flex-direction: column;
+	}
+	header .logo {
+		margin-bottom: 30px;
+	}
+	.modelsum {
+		flex-wrap: wrap;
+	}
+}
+
+#contact {
+	background-color: #555;
+	color: #fff;
+}
+
+.contactdetails {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width:1000px;
+	
+}
+
+.other, .address{
+	
+}
+
+/*-------------
+ 	Footer
+-------------*/
+
+footer {
+	display: flex;
+	justify-content: space-around;
+}
+
+footer p {
+	font-size: 14px;
+}
