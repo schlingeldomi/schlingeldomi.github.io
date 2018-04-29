@@ -7,6 +7,7 @@
 /*-------------
  	General Settings
 -------------*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -30,11 +31,30 @@ header {
 	z-index: 1;
 }
 
+header nav {
+	display: flex;
+}
+
+header nav li {
+	margin: 0 20px;
+}
+
+nav li, .grid-item {
+	list-style: none;
+}
+
 section{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 125px 100px;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+
+	opacity: 0.9;
 }
 
 a:hover{
@@ -47,8 +67,8 @@ h1 {
 }
 
 h2 {
-	margin-bottom: 30px;
 	font: normal 28px sans-serif;
+	margin-bottom: 30px;
 }
 
 h4 {
@@ -56,38 +76,65 @@ h4 {
 	margin-bottom: 10px;
 }
 
+@media (max-width: 700px) {
+	html {
+		font: normal 14px sans-serif;
+	}
+	
+	hr {
+	opacity: 0.6;
+	}
+	
+	h1 {
+		font: bold 32px sans-serif;
+		margin-bottom: 30px;
+	}
+	
+	h2 {
+		font: normal 28px sans-serif;
+		margin-bottom: 20px;
+	}
+	
+	h4 {
+		font: bold 14px sans-serif;
+		margin-bottom: 5px;
+	}
+	
+	header nav li {
+		margin: 0 10px;
+	}
+	
+	header {
+		flex-direction: column;
+		padding: 20px 50px 20px;
+	}
+	
+	section {
+		padding: 50px 70px;
+	}
+}
+
+
 
 /*-------------
- 	classes
+ 	header
 -------------*/
-.grid h4 {
-	font: normal 20px sans-serif;
-	margin-bottom: 10px;
-	text-align: center;
-}
-
-nav li, .grid-item {
-	list-style: none;
-}
-
-a{
-	text-decoration: none;
-	cursor: pointer;
-
-	opacity: 0.9;
-}
 
 header .logo {
 	height: 80px;
 }
 
-header nav {
-	display: flex;
+@media (max-width:700px) {
+	header .logo {
+		margin-bottom: 30px;
+	}
 }
 
-header nav li {
-	margin: 0 20px;
-}
+
+
+/*-------------
+ 	section model-summary
+-------------*/
 
 .modelsum {
 	display: flex;
@@ -103,14 +150,40 @@ header nav li {
 
 .modelpic {
 	padding-right: 70px;
+	//max-width: 368px;
 }
 
 .modeldescr p {
 	margin-bottom: 5px;
 }
 
-hr {
-	opacity: 0.6;
+@media (max-width: 1010px){
+	.modelsum {
+		flex-wrap: wrap;
+	}
+	.modelpic {
+		margin-bottom: 20px;
+		width: 250px;
+	}
+}
+
+@media (max-width: 700px) {
+	.modelpic {
+		margin-bottom: 10px;
+		width: 200px;
+	}
+}
+
+
+
+/*-------------
+ 	Section Comparing
+-------------*/
+
+.grid h4 {
+	font: normal 20px sans-serif;
+	margin-bottom: 10px;
+	text-align: center;
 }
 
 .grid {
@@ -135,23 +208,27 @@ hr {
 	margin-bottom: 5px;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1010px){
 	.grid {
 		justify-content: space-around;
 	}
 }
 
 @media (max-width: 700px) {
-	header {
-		flex-direction: column;
+	.grid-item {
+	width: 210px;
+	height: 210px;
 	}
-	header .logo {
-		margin-bottom: 30px;
-	}
-	.modelsum {
-		flex-wrap: wrap;
+	.grid h4 {
+	font: normal 18px sans-serif;
 	}
 }
+
+
+
+/*-------------
+ 	Section Contact
+-------------*/
 
 #contact {
 	background-color: #555;
@@ -162,13 +239,32 @@ hr {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	width:1000px;
-	
+	width: 100%;
 }
 
-.other, .address{
-	
+.contactissues {
+	padding-right: 5%;
 }
+
+.socialtext {
+	display: inline;
+	vertical-align: top;
+}
+
+@media (max-width: 1010px) {
+	.contactdetails {
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 700px) {
+	.contactissues {
+		padding-right: 0;
+		margin-bottom: 10px;
+	}
+}
+
+
 
 /*-------------
  	Footer
@@ -177,6 +273,7 @@ hr {
 footer {
 	display: flex;
 	justify-content: space-around;
+	text-transform: uppercase;
 }
 
 footer p {
