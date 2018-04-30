@@ -20,7 +20,7 @@ html {
 }
 
 header {
-	padding: 20px 100px 20px;
+	padding: 20px 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -35,12 +35,8 @@ header nav {
 	display: flex;
 }
 
-header nav li {
+header nav a {
 	margin: 0 20px;
-}
-
-nav li, .grid-item {
-	list-style: none;
 }
 
 section{
@@ -53,18 +49,21 @@ section{
 a{
 	text-decoration: none;
 	cursor: pointer;
-
 	opacity: 0.9;
 }
 
-a:hover{
+a:hover {
 	opacity: 1;
+}
+
+a:link, a:visited {
+	color: #2196F3;
 }
 
 hr {
 	opacity: 0.6;
 }
-
+	
 h1 {
 	font: bold 40px sans-serif;
 	margin-bottom: 50px;
@@ -100,20 +99,23 @@ h4 {
 		margin-bottom: 5px;
 	}
 	
-	header nav li {
+	header {
+		flex-direction: column;
+	}
+	
+	header nav {
+		justify-content: space-around;
+		width: 100%;
+	}
+	
+	header nav a {
 		margin: 0 10px;
 	}
 	
-	header {
-		flex-direction: column;
-		padding: 20px 50px 20px;
-	}
-	
 	section {
-		padding: 50px 70px;
+		padding: 70px 50px;
 	}
 }
-
 
 
 /*-------------
@@ -126,10 +128,9 @@ header .logo {
 
 @media (max-width:700px) {
 	header .logo {
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 }
-
 
 
 /*-------------
@@ -138,23 +139,21 @@ header .logo {
 
 .modelsum {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	padding: 0 0 80px;
+	margin-bottom: 80px;
 }
 
 .modeldescr li {
 	list-style: inside;
 }
 
-.modelpic {
-	padding-right: 70px;
-	//max-width: 368px;
-}
-
 .modeldescr p {
 	margin-bottom: 5px;
+}
+
+.modelpic {
+	padding-right: 70px;
 }
 
 @media (max-width: 1010px){
@@ -163,6 +162,7 @@ header .logo {
 	}
 	.modelpic {
 		margin-bottom: 20px;
+		padding: 0;
 		width: 250px;
 	}
 }
@@ -175,23 +175,20 @@ header .logo {
 }
 
 
-
 /*-------------
  	Section Comparing
 -------------*/
+
+.grid {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 
 .grid h4 {
 	font: normal 20px sans-serif;
 	margin-bottom: 10px;
 	text-align: center;
-}
-
-.grid {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	flex-wrap: wrap;
-	
 }
 
 .grid-item {
@@ -201,6 +198,7 @@ header .logo {
 	margin: 10px;
 	padding: 20px;
 	border-radius: 20px;
+	list-style: none;
 }
 
 .grid-item li {
@@ -216,14 +214,13 @@ header .logo {
 
 @media (max-width: 700px) {
 	.grid-item {
-	width: 210px;
-	height: 210px;
+		width: 210px;
+		height: 210px;
 	}
 	.grid h4 {
-	font: normal 18px sans-serif;
+		font: normal 18px sans-serif;
 	}
 }
-
 
 
 /*-------------
@@ -237,7 +234,6 @@ header .logo {
 
 .contactdetails {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-around;
 	width: 100%;
 }
@@ -261,14 +257,6 @@ header .logo {
 	}
 }
 
-@media (max-width: 700px) {
-	.contactissues {
-		padding-right: 0;
-		margin-bottom: 10px;
-	}
-}
-
-
 
 /*-------------
  	Footer
@@ -282,4 +270,5 @@ footer {
 
 footer p {
 	font-size: 14px;
+	padding-right: 3%;
 }
