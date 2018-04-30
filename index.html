@@ -7,6 +7,11 @@
 	<link href="img/company_logo.ico" rel="icon"/>
     <link rel="stylesheet" href="css/styles.css">
 	
+	<script>
+		function signin() {
+			alert("Cisco enables you to interconnect with others!\nWow!\n\nAre you ready for this experience?\n\nClick OK for joining our family.");
+		}
+	</script>
 </head>
 
 <body>
@@ -16,9 +21,9 @@
 			<img class="logo" src="img/company_logo.png" alt="Company Logo">
 		</a>
 		<nav>
-			<li><a href="#">Home</a></li>
-			<li><a href="">Sign in</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<a href="#">Home</a>
+			<a onclick="signin()" href="">Sign in</a>
+			<a href="#contact">Contact</a>
 		</nav>
 	
 	</header>
