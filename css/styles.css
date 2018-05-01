@@ -12,12 +12,14 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	//border: green solid 1px;
 }
 
 html {
 	font: normal 16px sans-serif;
 	color: #555;
 }
+
 
 header {
 	padding: 20px 100px;
@@ -70,7 +72,7 @@ h1 {
 }
 
 h2 {
-	font: normal 28px sans-serif;
+	font-size: 28px;
 	margin-bottom: 30px;
 }
 
@@ -81,21 +83,21 @@ h4 {
 
 @media (max-width: 700px) {
 	html {
-		font: normal 14px sans-serif;
+		font-size: 14px;
 	}
 	
 	h1 {
-		font: bold 32px sans-serif;
+		font-size: 32px;
 		margin-bottom: 30px;
 	}
 	
 	h2 {
-		font: normal 28px sans-serif;
+		font-size: 28px;
 		margin-bottom: 20px;
 	}
 	
 	h4 {
-		font: bold 14px sans-serif;
+		font-size: 14px;
 		margin-bottom: 5px;
 	}
 	
@@ -106,10 +108,6 @@ h4 {
 	header nav {
 		justify-content: space-around;
 		width: 100%;
-	}
-	
-	header nav a {
-		margin: 0 10px;
 	}
 	
 	section {
@@ -186,8 +184,7 @@ header .logo {
 }
 
 .grid h4 {
-	font: normal 20px sans-serif;
-	margin-bottom: 10px;
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -218,7 +215,7 @@ header .logo {
 		height: 210px;
 	}
 	.grid h4 {
-		font: normal 18px sans-serif;
+		font-size: 18px;
 	}
 }
 
@@ -239,10 +236,7 @@ header .logo {
 }
 
 .contactissues {
-	padding-right: 5%;
-}
-
-.contactissues img {
+	padding-right: 10px;
 	margin-bottom: 20px;
 }
 
@@ -270,5 +264,5 @@ footer {
 
 footer p {
 	font-size: 14px;
-	padding-right: 3%;
+	padding-right: 10px;
 }
