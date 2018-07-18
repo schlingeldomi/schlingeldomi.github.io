@@ -16,6 +16,10 @@
   <author>
       Schlingeldomi
   </author>
+    
+    <platform name="ios" />
+    <platform name="android" />
+    <platform name="winphone" />
 
   <icon src="img/company_logo.png">
   </icon>
